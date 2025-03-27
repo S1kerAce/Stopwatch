@@ -39,6 +39,19 @@ class MainActivity : AppCompatActivity() {
                 running = true
             }
         }
+        val changeColorButton = findViewById<Button>(R.id.change_color_button)
+        val colors = listOf(
+            android.graphics.Color.RED,
+            android.graphics.Color.GREEN,
+            android.graphics.Color.BLUE,
+            android.graphics.Color.MAGENTA
+        )
+
+        changeColorButton.setOnClickListener {
+            val randomColor = colors.random()
+            stopwatch.setTextColor(randomColor)
+        }
+
 
         val pauseButton = findViewById<Button>(R.id.pause_button)
         pauseButton.setOnClickListener {
@@ -91,4 +104,5 @@ class MainActivity : AppCompatActivity() {
     fun saveOffset() {
         offset = SystemClock.elapsedRealtime() - stopwatch.base
     }
+
 }
