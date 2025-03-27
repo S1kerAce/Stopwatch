@@ -1,32 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="#7175B6"
+    android:backgroundTint="#FF9800"
+    android:foregroundTint="#DB4444"
     android:gravity="center_horizontal"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <Chronometer
         android:id="@+id/stopwatch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="56sp"/>
+        android:rotationX="8"
+        android:textColorLink="#E41818"
+        android:textSize="100dp" />
+
     <Button
         android:id="@+id/start_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/start"/>
+        android:shadowColor="#0B0808"
+        android:text="@string/play"
+        android:textColor="#E91A1A"
+        android:textColorHighlight="#D11E1E"
+        android:textColorHint="#EF1D1D"
+        android:textColorLink="#E20909" />
+
     <Button
         android:id="@+id/pause_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pause"/>
+        android:text="@string/stop"
+        android:textColor="#13D041"
+        android:textColorLink="#83DE1C"
+        app:rippleColor="#4AE61C"
+        app:strokeColor="#81D321" />
+
     <Button
-        android:id="@+id/reset_button"
+        android:id="@+id/reload_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/reset"/>
+        android:text="@string/reload"
+        android:textColor="#03A9F4" />
 
 </LinearLayout>

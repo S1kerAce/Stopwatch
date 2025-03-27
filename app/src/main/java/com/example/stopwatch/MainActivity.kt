@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        val resetButton = findViewById<Button>(R.id.reset_button)
+        val resetButton = findViewById<Button>(R.id.reload_button)
         resetButton.setOnClickListener {
             offset = 0
             setBaseTime()
