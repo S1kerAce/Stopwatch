@@ -47,6 +47,19 @@ class MainActivity : AppCompatActivity() {
                 stopwatch.stop()
                 running = false
             }
+            val changeColorButton = findViewById<Button>(R.id.change_color_button)
+            val colors = listOf(
+                android.graphics.Color.RED,
+                android.graphics.Color.GREEN,
+                android.graphics.Color.BLUE,
+                android.graphics.Color.MAGENTA
+            )
+
+            changeColorButton.setOnClickListener {
+                val randomColor = colors.random()
+                stopwatch.setTextColor(randomColor)
+            }
+
         }
 
         val resetButton = findViewById<Button>(R.id.reset_button)
